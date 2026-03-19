@@ -14,8 +14,8 @@ cp "$SCRIPT_NAME" "$INSTALL_DIR/dnfupdate.sh"
 cp "$DESKTOP_FILE_ICON" "$HOME/.local/share/icons/"
 chmod +x "$INSTALL_DIR/dnfupdate.sh"
 
-if command -v gnome-terminal &> /dev/null; then
-    TERMINAL="gnome-terminal --"
+if command -v ptyxis &> /dev/null; then
+    TERMINAL="ptyxis --"
 elif command -v konsole &> /dev/null; then
     TERMINAL="konsole -e"
 elif command -v xfce4-terminal &> /dev/null; then
