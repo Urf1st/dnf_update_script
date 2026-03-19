@@ -19,7 +19,7 @@ Terminal apps are required only for installation script. If you don't have DE, y
 1. Clone the repository:
    ```
    git clone https://github.com/Urf1st/dnf_update_script
-   cd dnfupdate
+   cd dnf_update_script
    ```
 2. Run the installer:
    ```
