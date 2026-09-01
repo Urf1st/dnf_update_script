@@ -12,7 +12,6 @@ if [[ "$answer" == "o" ]]; then
 elif [[ "$answer" == "u" ]]; then
     echo "Proceeding..."
     flatpak update -y
-    sudo dnf check-upgrade --refresh -y
     sudo dnf update -y
     exit
 else
