@@ -9,7 +9,7 @@ fi
 read -r -p 'Which type of update would you like to perform? For usual update press "o", for update without confirmations press "z":' answer
 if [[ "$answer" == "o" ]]; then
     echo "Updating system with $AURHELPER"
-    $AURHELPER
+    $AURHELPER -Syu
     flatpak update 
     flatpak remove --unused 
     stale_downloads=$(sudo find /var/cache/pacman/pkg -maxdepth 1 -type d -name "download-*")
@@ -29,7 +29,7 @@ if [[ "$answer" == "o" ]]; then
     $AURHELPER -c 
 elif [[ "$answer" == "z" ]]; then
     echo "Updating system with $AURHELPER"
-    $AURHELPER --noconfirm
+    $AURHELPER -Syu --noconfirm
     flatpak update -y
     flatpak remove --unused -y
     sudo find /var/cache/pacman/pkg -maxdepth 1 -type d -name "download-*" -exec rm -rvf {} +
